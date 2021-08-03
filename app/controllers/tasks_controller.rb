@@ -43,11 +43,11 @@ class TasksController < ApplicationController
     flash[:success] = 'タスク削除完了'
     redirect_to tasks_url
   end
-end
 
 
-private
+  private
 
-def task_params
-  params.require(:task).permit(:content)
+  def task_params
+    params.require(:task).permit(:content)
+  end
 end
