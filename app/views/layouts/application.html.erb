@@ -1,18 +1,24 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
   <head>
     <title>Tasklist</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+    <link rel="stylesheet" href="/bootstrap.min.css">                                               <!--PublicにCSS置いてみた-->
+
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <script src="/bootstrap.bundle.min.js"></script>                                                  <!--Publicにjs置いてみた-->
   </head>
 
-  <body>
+  <body data-turbolinks="false">
+    <%= render 'layouts/navbar' %>
+    
     <div class="container">
       <%= render 'layouts/flash_messages' %>
+      
       <%= yield %>
     </div>
   </body>
