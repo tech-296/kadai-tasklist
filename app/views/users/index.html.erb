@@ -1,0 +1,10 @@
+<% if @users.any? %>
+  <ul class="list-unstyled">
+    <% @users.each do |user| %>
+      <li class="mb-3 d-flex">
+            <%= user.name %>
+      </li>
+    <% end %>
+  </ul>
+  <%== pagy_bootstrap_nav(@pagy) %>
+<% end %>
